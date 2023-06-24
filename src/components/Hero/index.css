@@ -1,0 +1,186 @@
+.Hero-section{
+    /* margin:20px; */
+    color: white;
+    background: #29335c;
+    height: auto;
+  display: flex;
+   margin-bottom: 1px; 
+  justify-content: center;
+  align-items: center;
+}
+.Contact-section{
+  /* margin:20px; */
+  color: white;
+  background: #29335c;
+  height: auto;
+display: flex;
+flex-direction: column;
+
+justify-content: center;
+align-items: center;
+}
+.textarea{
+  width: 540px;
+height: 136px;
+border-radius: 6px;
+color: white;
+padding: 10px;
+background: #1F2937;
+border: 1px solid #000000;
+}
+.contact-address{
+  margin-top: 40px;
+}
+.contact-address >p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.input{
+  box-sizing: border-box;
+margin:5px 0 10px 0px;
+padding: 10px;
+width: 350px;
+height: 43px;
+border-radius: 6px;
+color: white;
+background: #1F2937;
+border: 1px solid #000000;
+}
+.Hero-row{
+    display: flex;
+    width: 900px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top:60px
+}
+.Signup-btn{
+    border: 1px solid rgb(36, 127, 225);
+    background-color:  #FACC15;
+    margin-top: 10px;
+    padding: 13px 27px;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+     /* margin-top: 5px; */
+     border-radius: 5px;
+}
+.Signup-btn:hover{
+    background-color:  #f2f1ea;
+}
+.Hero-image > img{
+    height: 300px;
+}
+.Hero-text > h2{
+    font-weight: 400;
+font-size: 16px;
+line-height: 27px;
+color: #facc15;
+}
+.Hero-text > h4{
+    font-weight: 700;
+font-size: 42px;
+color: #F3F4F6;
+}
+.Hero-text > p{
+    font-weight: 400;
+font-size: 16px;
+margin-top: 10px;
+margin-bottom: 15px;
+color: #aab1bf;
+}
+.Exp-section{
+    /* margin:20px; */
+    color: white;
+    background: #29335c;
+   
+    height: auto;
+  display: flex;
+  /* margin-bottom: 50px; */
+  justify-content: center;
+  align-items: center;
+}
+.card-container {
+    display: flex;
+   gap:20px;
+   padding-top:10px;
+   width:900px;
+   margin-bottom: 60px;
+    justify-content: space-between;
+  }
+  
+  .card {
+    width: 348px;
+    padding:20px;
+    height: 291px;
+    background: #020617;
+    border-radius: 12px;
+  }
+  .card:hover {
+    transform: scale(1.05);
+   
+  }
+  .exp-date{
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 27px;
+   margin-bottom: 10px;
+    
+    color: #D1D5DB;
+    
+  }
+  .desc{
+    font-weight: 400;
+font-size: 16px;
+line-height: 27px;
+text-align:left;
+margin-top: 15px;
+color: #6B7280;
+  }
+  
+ 
+  
+@media only screen and (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .input{
+        width: 200px;
+      }
+      .textarea{
+        width: 300px;
+        height: 60px;
+      }
+      .contact-address{
+        margin-top: -30px;
+        margin-left: -20px;
+        margin-bottom: 20px;
+      }
+      .card {
+        margin-bottom: 20px;
+      }
+      .Exp-section{
+        display: none;
+
+      }
+     
+    .Hero-row{
+        display: flex;
+        flex-direction: column;
+      
+        justify-content: center;
+        align-items: center;
+    }
+    .Hero-image > img{
+       margin-top: 20px;
+       margin-left: -30px;
+       margin-bottom: 20px;
+    }
+    .Hero-text > h4{
+        font-weight: 600;
+        margin-top: 5px;
+    font-size: 36px;
+    color: #F3F4F6;
+    }
+}
