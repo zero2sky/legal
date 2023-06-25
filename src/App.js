@@ -9,7 +9,7 @@ import Login from './components/login';
 import Signup from './components/signup';
 function App() {
   return (
-    <Router>
+    <Router basename='/legal' >
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
