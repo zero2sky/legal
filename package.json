@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "homepage": "https://zero2sky.github.io/legal",
+  "name": "legal",
+  "homepage": "https://zero2sky.github.io/legal/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
