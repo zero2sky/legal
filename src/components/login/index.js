@@ -1,19 +1,76 @@
 
-import React from 'react'
-import { Link } from 'react-router-dom';
-
+import React,{useState,useEffect} from 'react'
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 const Login = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const token = localStorage.getItem('token');
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (token) {
+      navigate('/home');
+    }
+  }, [token, navigate]);
+  const handleLogin = async () => {
+    const requestBody = {
+      phone: username,
+      password: password
+    };
+
+    try {
+      const response = await fetch('https://zerotosky.pythonanywhere.com/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestBody)
+      });
+
+      if (response.status == 200) {
+        const user = await response.json();
+        localStorage.setItem('token', JSON.stringify(user.token));
+       navigate('/home')
+        toast.success("Login Successfully");
+      } else if (response.status != 200){
+        console.log('Login failed');
+        setErrorMessage('Wrong username or password. Please try again.');
+        toast.error("Login Failed");
+      }
+    } catch (error) {
+      console.error('Error occurred during login:', error);
+    }
+  };
   return (  
     <div style={styles.container}>
-    <h1 style={styles.title}>Welcome Back</h1>
-    <div style={styles.formContainer}>
-    
-      <input type="text" placeholder='Enter Username' style={styles.input} />
-    
-      <input type="password" placeholder='Enter Password' style={styles.input} />
-     <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}> <Link to="/home"> <button style={styles.button}> Login</button></Link></div>
+      <h1 style={styles.title}>Welcome Back</h1>
+      <div style={styles.formContainer}>
+        <input
+          type="text"
+          placeholder="Enter Username"
+          style={styles.input}
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          style={styles.input}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+         {errorMessage && (
+          <p style={{ color: 'red', marginBottom: '10px' }}>{errorMessage}</p>
+        )}
+        <div style={{ display: 'flex',flexDirection:'column', alignItems: 'center', justifyContent: 'center' }}>
+        <p style={{color:'white'}}>Dont have an account Try <span onClick={()=>navigate('/signup')} style={{fontSize:22,cursor:'pointer',fontWeight:'bold',color:'#facc14',marginLeft:10}}> Sign Up </span></p>
+          <button style={styles.button} onClick={handleLogin}>
+            Login
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
   )
 }
 const styles = {
