@@ -1,26 +1,36 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 import "./index.css";
 
 function Navbar() {
 	const navRef = useRef();
-
+const navigate=useNavigate()
+const token = localStorage.getItem("token");
 	const showNavbar = () => {
 		navRef.current.classList.toggle(
 			"responsive_nav"
 		);
 	};
-
+	const handleLogout = () => {
+		localStorage.clear();
+		navigate("/");
+	  };
 	return (
 		<header>
 			<h3 className="logo">LOGO</h3>
 			<nav ref={navRef}>
-				<a href="/#">Home</a>
-				<a href="/#">About</a>
-				<a href="/#">Service</a>
-				<a href="/#">Blog</a>
-				<a href="/#">Contact</a>
-				<a href="/#">Login</a>
+				<Link to='/home'> <a >Home</a> </Link>
+				<Link to='/aboutus'> <a >About</a> </Link>
+				
+				
+				<Link to='/contactus'> <a >Contact</a> </Link>
+				
+				{token ? (
+          <a onClick={handleLogout}>Logout</a>
+        ) : (
+          null
+        )}
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
