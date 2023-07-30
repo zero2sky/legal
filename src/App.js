@@ -1,7 +1,5 @@
 
 import './App.css';
-import About from './components/About';
-import Contact from './components/Contact';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Home from './components/Home';
@@ -15,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <Router basename='/legal' >
-       <ToastContainer />
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
