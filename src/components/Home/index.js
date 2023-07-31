@@ -23,7 +23,7 @@ function Home() {
       <Hero />
       <Experience />
       <About />
-      <Contact />
+      {/* <Contact /> */}
     </div>
   );
 }
