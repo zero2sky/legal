@@ -22,8 +22,9 @@ const token = localStorage.getItem("token");
 			<nav ref={navRef}>
 				<Link to='/home'> <a >Home</a> </Link>
 				<Link to='/aboutus'> <a >About</a> </Link>
+				<Link to='/newsletter'>NewsLetter</Link>
 				
-				
+				<Link to='/booking'> <a >Booking</a> </Link>
 				<Link to='/contactus'> <a >Contact</a> </Link>
 				
 				{token ? (

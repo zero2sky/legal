@@ -1,0 +1,162 @@
+:root{
+    --mainColor: #28b5f4;
+    --mainMargin: 10px;
+    --mainpadding: 140px;
+}
+
+section{
+    width: 100%;
+    padding: 20px var(--mainpadding);
+    margin-top: calc(var(--mainMargin) + 30px);
+    margin-bottom: var(--mainMargin);
+    display: flex;
+}
+section .service1,section .service2,section .service3{
+    text-align: center;
+    width: calc(92% / 3);
+    margin-right: 4%;
+}
+section .service1 img,section .service2 img{
+    width: 70px;
+    height: 70px;
+}
+section .service3 img {
+    width: 100px;
+    height: 100px;
+}
+section .service1 p,section .service2 p,section .service3 p{
+    color: #c7bfbb;
+}
+.js::before{
+    content: "80%";
+    right: 165px;
+}
+.php::after{
+    width: 65%;
+}
+.php::before{
+    content: "65%";
+    right: 285px;
+}
+.py::after{
+    width: 90%;
+}
+.py::before{
+    content: "90%";
+    right: 85px;
+}
+
+.text-blk {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    line-height: 25px;
+  }
+  
+  .responsive-container-block {
+    min-height: 75px;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    justify-content: flex-start;
+  }
+  .responsive-container-block .team-card:hover{
+    transform: scale(1.05);
+  }
+  
+  .container-block {
+    min-height: 75px;
+    height: fit-content;
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: block;
+  }
+  
+  .responsive-cell-block {
+    min-height: 75px;
+  }
+  
+  .container {
+    max-width: 1380px;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-bottom: 80px;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+  }
+  
+  .team-head-text {
+    font-size: 48px;
+    line-height: 50px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 70px;
+    margin-left: 0px;
+  }
+  
+  .name {
+    font-size: 18px;
+    margin-top: 11px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-weight: 700;
+  }
+  
+  .position {
+    margin-top: 5px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+  
+  .team-card-container {
+    width: 263px;
+    margin-top: 0px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+  }
+  
+  .teamcard-container {
+    justify-content: space-evenly;
+  }
+  
+  .team-img-wrapper {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+  
+  .team-img {
+    max-width: 100%;
+  }
+  
+  @media (max-width: 500px) {
+    .team-card-container {
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 30px;
+      margin-left: 0px;
+      width: 100%;
+    }
+  
+    .team-img {
+      width: 100%;
+    }
+  }
