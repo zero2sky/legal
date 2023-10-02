@@ -3,7 +3,7 @@
     background-size: 45%;
     background-color: #fdfdfd;
     overflow: hidden;
-    padding: 100px 0;
+    padding: 10px 0;
 }
 
 .inner-container{
@@ -49,6 +49,9 @@
     }
     .inner-container{
         width: 100%;
+    }
+    .contact-section{
+        padding: 0px;
     }
 }
 

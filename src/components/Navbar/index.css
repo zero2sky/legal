@@ -71,7 +71,7 @@ nav{
 		align-items: center;
 		justify-content: center;
 		gap: 1.5rem;
-		background-color: var(--mainColor);
+		background-color: var(--mainColorLight);
 		transition: 1s;
 	}
 

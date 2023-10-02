@@ -7,7 +7,7 @@ export default function Team() {
           <Navbar />
 
   
-    <section>
+    <section className='section-team'>
         <div class="service1">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFGlumGb5DT5q8I_Vwd8TWFqwlUdfMrhu1NQ&usqp=CAU" alt="design quality" />
             <h3>design quality</h3>

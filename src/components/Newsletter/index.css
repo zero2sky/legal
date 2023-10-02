@@ -55,9 +55,6 @@ main section .blog .blog-content .blog-details .blog-author-details .blog-author
 
 /*500-1200 M*/
 @media only screen and (max-width: 1150px) {
-    body {
-        padding: 25px 40px;
-    }
     main {
         row-gap: 35px;
         padding: 0px;
@@ -65,7 +62,7 @@ main section .blog .blog-content .blog-details .blog-author-details .blog-author
     main section {
         flex-direction: column;
         row-gap: 35px;
-        padding: 0;
+        padding: 25px;
     }
     main section.blog-single .blog {
         flex-direction: column;
