@@ -65,6 +65,7 @@ main section .blog .blog-content .blog-details .blog-author-details .blog-author
     main section {
         flex-direction: column;
         row-gap: 35px;
+        padding: 0;
     }
     main section.blog-single .blog {
         flex-direction: column;

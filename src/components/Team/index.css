@@ -159,4 +159,10 @@ section .service1 p,section .service2 p,section .service3 p{
     .team-img {
       width: 100%;
     }
+
+    @media only screen and (max-width: 1150px){
+      .section-team{
+        padding: 0px;
+      }
+    }
   }
